@@ -40,4 +40,5 @@ print(personB.name1, 'was born on ', personB.d_o_b1, ' in ', personB.country1)
     # Can do much more
 
 # Question 3
-
+# say More
+h = 7
