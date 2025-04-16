@@ -39,6 +39,50 @@ print(personB.name1)
 print(personB.name1, 'was born on ', personB.d_o_b1, ' in ', personB.country1)
     # Can do much more
 
-# Question 3
-# say More
-h = 7
+# Question 4
+import math
+
+class Shape:
+    def __init__(self, length, breadth, side):
+        self.length = length
+        self.breadth = breadth
+        self.side = side
+        
+    def circle_area(self):
+        area = math.pi*(self.length/2)**2 # length being the diameter
+        return area
+    
+    def circle_parameter(self):
+        perameter = math.pi*self.length
+        return perameter
+    
+    def triangle_area(self):
+        area = 1/2*(self.length * self.breadth)
+        return area
+    
+    def triangle_parameter(self):
+        parameter = self.length + self.breadth + self.side
+        return parameter
+    
+    def square_area(self):
+        area = self.length * self.breadth
+        return area
+    
+    def square_parameter(self):
+        parameter = 2 * (self.length + self.breadth)
+        return parameter
+        
+
+circle = Shape(5, 0, 0) # 0 beecause they're not relevant to the circle
+triangle = Shape(5, 5, 5)
+square = Shape(5, 5, 0)
+
+print('Area of circle is ', circle.circle_area())
+print('Parameter of the circle is ', circle.circle_parameter())
+print('--------------------------------------------------------------')
+print('Area of the triangle is ', triangle.triangle_area())
+print('Parameter of the triangle is ', triangle.triangle_parameter())
+print('---------------------------------------------------------------------')
+print('Area of the square is ', square.square_area())
+print('Parameter of the square is ', square.square_parameter())
+    # This makes all the sense in the world to me, hence more understanding of encapsulation
