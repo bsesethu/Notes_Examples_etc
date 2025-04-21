@@ -72,7 +72,6 @@ class Shape:
         parameter = 2 * (self.length + self.breadth)
         return parameter
         
-
 circle = Shape(5, 0, 0) # 0 beecause they're not relevant to the circle
 triangle = Shape(5, 5, 5)
 square = Shape(5, 5, 0)
@@ -86,3 +85,47 @@ print('---------------------------------------------------------------------')
 print('Area of the square is ', square.square_area())
 print('Parameter of the square is ', square.square_parameter())
     # This makes all the sense in the world to me, hence more understanding of encapsulation
+    # My approaches seems more efficient than that of w3resource
+    
+
+# Question 8
+class Shopping_cart:
+    def __init__(self, shopping_list):
+        self.shopping_list = shopping_list 
+    
+    def add_item(self): # Wow this 'self' thing is really important, it was giving errors without it
+        self.shopping_list = []
+        in_put = input('Input item name, press 0 if no item input: ')
+        print(in_put)
+        while in_put != '0': # It has to be a string 0, not an integer!!
+            self.shopping_list.append(in_put)
+            print('Current list: ', self.shopping_list)
+            in_put = input('Input item name, press 0 if no item input: ')
+            if in_put == '0':         
+                print('No more items to input')
+        print(self.shopping_list)
+        
+    def remove_item(self, shopping_list):
+        susa = input('name of item to be removed from shopping list: ')
+        self.shopping_list.remove(susa)
+        print(shopping_list)
+        
+    def total_price(self, shopping_list_price):
+        total_price = 0
+        for k in shopping_list_price:
+            total_price += k
+        print('Total price = R', total_price)       
+    
+shopping_add = Shopping_cart(0) # 0 because there are no objects to input, but why the 'class' not the 'method
+shopping_add.add_item()
+
+list1 = ['apples', 'pears']
+shopping_remove = Shopping_cart(list1) # For some reason we need to add 'list1' to both lines
+shopping_remove.remove_item(list1)
+
+list_prices = [20, 50, 20]
+shopping_prices = Shopping_cart(list_prices)
+shopping_prices.total_price(list_prices)
+
+
+# Question 11
