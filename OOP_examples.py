@@ -96,7 +96,6 @@ class Shopping_cart:
     def add_item(self): # Wow this 'self' thing is really important, it was giving errors without it
         self.shopping_list = []
         in_put = input('Input item name, press 0 if no item input: ')
-        print(in_put)
         while in_put != '0': # It has to be a string 0, not an integer!!
             self.shopping_list.append(in_put)
             print('Current list: ', self.shopping_list)
@@ -126,6 +125,48 @@ shopping_remove.remove_item(list1)
 list_prices = [20, 50, 20]
 shopping_prices = Shopping_cart(list_prices)
 shopping_prices.total_price(list_prices)
-
+    # I'm not wrong, but their way makes more sense, especially the (item, price) thing
 
 # Question 11
+    # Lacks specificity, I did it while looking at the solution
+class Bank:
+    def __init__(self):
+        self.client = {} # Initialize empty dictionary
+    
+    def create_account(self, account_number, initial_balance=0):
+        if account_number in self.client:
+            print('Account number already exists')
+        else:
+            self.client[account_number] = initial_balance
+            print('Account created successfully')
+        
+    def make_deposit(self, account_number, amount):
+        if account_number in self.client:
+            self.client[account_number] += amount
+            print('Deposit successful')
+        else:
+            print('Account number does not exist')
+        
+    def make_withdrawal_or_purchase(self, account_number, amount):
+        if account_number in self.client:
+            if self.client >= amount:
+                self.client[account_number] -= amount
+                print('Account debited')
+            else:
+                print('Insufficient funds')
+        else:
+            print('Account number does not exist')
+            
+    def check_balance(self, account_number):
+        if account_number in self.client:
+            balance = self.client[account_number]
+            print(f'Account balance: {balance}')
+        else:
+            print('Account number does not exist')
+            
+banking = Bank()
+
+banking.create_account(62662, 5000)
+banking.make_deposit(62662, 10000)
+banking.check_balance(62662)
+    # Not difficult, its a good example
