@@ -1,12 +1,12 @@
 # From Max Rohosky YouTube page. Intermediate Python programming... 2023
 def proff(name, job_title):
-    print(name +  ' '  + job_title)
+    print(name +  ', '  + job_title)
 
 # Keyword arguments
-print(proff( job_title = 'Lawyer', name = 'Max')) # It's all about keyword and positional arguments
+proff( job_title = 'Lawyer', name = 'Max') # It's all about keyword and positional arguments (line 9)
 
 # Positional arguments
-print(proff('Max', 'Lawyer'))
+proff('Max', 'Lawyer')
 
 # args --- Using/making sense of them
 def addition_a(*args):

@@ -14,8 +14,7 @@ comp1.setMaxPrice(1000) # We are now changing the max price
 comp1.sell()
 
 a = ['app', 'ban']
-b = a.append('org') # For some reason it doesnt want to be named something else
-print(a)
+b = a.append('org') # For some reason it doesnt want to be named something else. That's just how append works
 print(a)
 print(b) # Returns None!
 

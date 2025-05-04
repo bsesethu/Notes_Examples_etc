@@ -6,8 +6,8 @@ class Sesethu:
     def mthunzi(dark):
         return print('dark')
     
-for name in Sesethu.__dict__:
-    print(name)
+for name in Sesethu.__dict__: 
+    print(name) # Prints certain methods that correspond to __dict__
 
 mthu= Sesethu()
 mthu.mthunzi()

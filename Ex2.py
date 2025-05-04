@@ -15,6 +15,8 @@ print(dict_1)
 my_list = [5, 4, 3]
 my_list = set(my_list) # Different to how I used .add
 print(type(my_list))
+print(type(dict_1))
+print(type(set1))
 
 b = 5 // 3 # // is interger division, returns an interger rounded to the (lowest_I_Think) number
 print(b)
